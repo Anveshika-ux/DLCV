@@ -1,0 +1,52 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8509
+  Network URL: http://172.27.10.22:8509
+  External URL: http://103.118.50.252:8509
+
++------------------------- Traceback (most recent call last) --------------------------+
+| C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p |
+| 0\LocalCache\local-packages\Python310\site-packages\streamlit\runtime\scriptrunner\e |
+| xec_code.py:129 in exec_func_with_error_handling                                     |
+|                                                                                      |
+| C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p |
+| 0\LocalCache\local-packages\Python310\site-packages\streamlit\runtime\scriptrunner\s |
+| cript_runner.py:689 in code_to_exec                                                  |
+|                                                                                      |
+| C:\Users\HP\Desktop\DLCV\dash.py:572 in <module>                                     |
+|                                                                                      |
+|   569                                                                                |
+|   570                                                                                |
+|   571 if __name__ == "__main__":                                                     |
+| > 572     main()                                                                     |
+|   573                                                                                |
+|                                                                                      |
+| C:\Users\HP\Desktop\DLCV\dash.py:466 in main                                         |
+|                                                                                      |
+|   463     if reset:                                                                  |
+|   464         st.session_state.pop("req", None)                                      |
+|   465         st.session_state["uploader_key"] += 1                                  |
+| > 466         st.session_state["sample_index"] = 0                                   |
+|   467         st.rerun()                                                             |
+|   468                                                                                |
+|   469     st.markdown(                                                               |
+|                                                                                      |
+| C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p |
+| 0\LocalCache\local-packages\Python310\site-packages\streamlit\runtime\metrics_util.p |
+| y:532 in wrapped_func                                                                |
+|                                                                                      |
+| C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p |
+| 0\LocalCache\local-packages\Python310\site-packages\streamlit\runtime\state\session_ |
+| state_proxy.py:114 in __setitem__                                                    |
+|                                                                                      |
+| C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p |
+| 0\LocalCache\local-packages\Python310\site-packages\streamlit\runtime\state\safe_ses |
+| sion_state.py:109 in __setitem__                                                     |
+|                                                                                      |
+| C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p |
+| 0\LocalCache\local-packages\Python310\site-packages\streamlit\runtime\state\session_ |
+| state.py:591 in __setitem__                                                          |
++--------------------------------------------------------------------------------------+
+StreamlitAPIException: `st.session_state.sample_index` cannot be modified after the 
+widget with key `sample_index` is instantiated.
